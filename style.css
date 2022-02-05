@@ -1,0 +1,225 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+body {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .main {
+  position: absolute;
+}
+
+body .main.turning {
+  -webkit-animation: turning 40s normal infinite ease;
+          animation: turning 40s normal infinite ease;
+}
+
+body .main svg {
+  stroke: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  mix-blend-mode: difference;
+  -webkit-transition: stroke 0.5s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: stroke 0.5s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: stroke 0.5s ease-in-out, transform 0.2s ease-in-out;
+  transition: stroke 0.5s ease-in-out, transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+body .main svg:nth-child(1) {
+  -webkit-transform: translate(-50%, -50%) rotate(36deg);
+          transform: translate(-50%, -50%) rotate(36deg);
+}
+
+body .main svg:nth-child(2) {
+  -webkit-transform: translate(-50%, -50%) rotate(72deg);
+          transform: translate(-50%, -50%) rotate(72deg);
+}
+
+body .main svg:nth-child(3) {
+  -webkit-transform: translate(-50%, -50%) rotate(108deg);
+          transform: translate(-50%, -50%) rotate(108deg);
+}
+
+body .main svg:nth-child(4) {
+  -webkit-transform: translate(-50%, -50%) rotate(144deg);
+          transform: translate(-50%, -50%) rotate(144deg);
+}
+
+body .main svg:nth-child(5) {
+  -webkit-transform: translate(-50%, -50%) rotate(180deg);
+          transform: translate(-50%, -50%) rotate(180deg);
+}
+
+body .main svg:nth-child(6) {
+  -webkit-transform: translate(-50%, -50%) rotate(216deg);
+          transform: translate(-50%, -50%) rotate(216deg);
+}
+
+body .main svg:nth-child(7) {
+  -webkit-transform: translate(-50%, -50%) rotate(252deg);
+          transform: translate(-50%, -50%) rotate(252deg);
+}
+
+body .main svg:nth-child(8) {
+  -webkit-transform: translate(-50%, -50%) rotate(288deg);
+          transform: translate(-50%, -50%) rotate(288deg);
+}
+
+body .main svg:nth-child(9) {
+  -webkit-transform: translate(-50%, -50%) rotate(324deg);
+          transform: translate(-50%, -50%) rotate(324deg);
+}
+
+body .main svg:nth-child(10) {
+  -webkit-transform: translate(-50%, -50%) rotate(360deg);
+          transform: translate(-50%, -50%) rotate(360deg);
+}
+
+body .main svg.align-triangles:nth-child(1) {
+  -webkit-transform: translate(-45%, -65%) rotate(60deg);
+          transform: translate(-45%, -65%) rotate(60deg);
+}
+
+body .main svg.align-triangles:nth-child(2) {
+  -webkit-transform: translate(-45%, -65%) rotate(60deg);
+          transform: translate(-45%, -65%) rotate(60deg);
+}
+
+body .main svg.align-triangles:nth-child(3) {
+  -webkit-transform: translate(-45%, -65%) rotate(60deg);
+          transform: translate(-45%, -65%) rotate(60deg);
+}
+
+body .main svg.align-triangles:nth-child(4) {
+  -webkit-transform: translate(-45%, -65%) rotate(60deg);
+          transform: translate(-45%, -65%) rotate(60deg);
+}
+
+body .main svg.align-triangles:nth-child(5) {
+  -webkit-transform: translate(-45%, -65%) rotate(60deg);
+          transform: translate(-45%, -65%) rotate(60deg);
+}
+
+body .main svg.align-triangles:nth-child(6) {
+  -webkit-transform: translate(-45%, -65%) rotate(60deg);
+          transform: translate(-45%, -65%) rotate(60deg);
+}
+
+body .main svg.align-triangles:nth-child(7) {
+  -webkit-transform: translate(-45%, -65%) rotate(60deg);
+          transform: translate(-45%, -65%) rotate(60deg);
+}
+
+body .main svg.align-triangles:nth-child(8) {
+  -webkit-transform: translate(-45%, -65%) rotate(60deg);
+          transform: translate(-45%, -65%) rotate(60deg);
+}
+
+body .main svg.align-triangles:nth-child(9) {
+  -webkit-transform: translate(-45%, -65%) rotate(60deg);
+          transform: translate(-45%, -65%) rotate(60deg);
+}
+
+body .main svg.align-triangles:nth-child(10) {
+  -webkit-transform: translate(-45%, -65%) rotate(60deg);
+          transform: translate(-45%, -65%) rotate(60deg);
+}
+
+body .main svg.darken {
+  stroke: black;
+}
+
+body .main svg.removed {
+  z-index: 5;
+  stroke: white;
+}
+
+body #dot {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: width 1.5s 1000ms ease-in-out, height 1.5s 1000ms ease-in-out;
+  transition: width 1.5s 1000ms ease-in-out, height 1.5s 1000ms ease-in-out;
+  z-index: -1;
+  cursor: pointer;
+}
+
+body #dot.bigger {
+  width: 200vh;
+  height: 200vh;
+}
+
+body #dot.hovered {
+  -webkit-transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+}
+
+body #dot.hovered:hover {
+  width: 100px;
+  height: 100px;
+}
+
+#second-element {
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  bottom: -100px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: blue;
+}
+
+@-webkit-keyframes turning {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes turning {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */
